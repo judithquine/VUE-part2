@@ -38,6 +38,10 @@ export default {
         >
           Click me!
         </friend-contact>
+
+        <h1>Textarea input</h1>
+  <p>My message is: {{ textarea }}</p>
+  <textarea v-model="textarea" placeholder="Multiline message"></textarea>
       </ul>
     </section>
   </div>

@@ -7,21 +7,27 @@ import Contacts from "./components/Contacts.vue";
 import AboutUs from "./components/AboutUs.vue";
 import Contact from "./components/Contact.vue";
 import PageNotFound from "./components/PageNotFound.vue";
+import TestApi from "./components/TestApi.vue";
 
 
-const routes = [
+const baseRoutes = [
   { path: "/contacts", component: Contacts },
   { path: "/aboutUs", component: AboutUs },
-  { path: "/contacts/:name", component: Contact },
-  { path: "/:pathMatch(.*)*", component: PageNotFound }
+  { path: "/:pathMatch(.*)*", component: PageNotFound },
+  { path: "/testApi", component: TestApi }
 ];
+
+const yourRoutes = [
+  { path: "/contacts/:name", component: Contact },
+]
+
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes: baseRoutes.concat(yourRoutes)
 });
 
-const pinia = createPinia()
+const pinia = createPinia();
 const app = createApp(App);
 
 app.use(router);

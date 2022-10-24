@@ -4,10 +4,12 @@ export default {};
 
 <template>
   <div class="sidebar">
+    My Vue Practice<br /> <br />
     <header>
       <ul>
         <li><router-link to="/contacts"> Go to Contacts </router-link></li>
         <li><router-link to="/aboutUs"> Go to About Us </router-link></li>
+        <li><router-link to="/TestApi"> Go to Test Api </router-link></li>
       </ul>
     </header>
   </div>
